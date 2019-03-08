@@ -3,7 +3,7 @@ class Matrix
 
   def initialize(string)
     @matrix = []
-    string.split(/$/) do |row|
+    string.each_line do |row|
       @matrix << row.split.map(&:to_i)
     end
   end
