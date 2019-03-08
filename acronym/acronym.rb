@@ -1,7 +1,5 @@
 class Acronym
   def self.abbreviate(string)
-    string.split(/\b\W+/).inject('') do |abbreviation, word|
-      abbreviation << word[0].upcase
-    end
+    string.scan(/\b[a-zA-Z]/).join.upcase
   end
 end
