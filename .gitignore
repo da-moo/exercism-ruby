@@ -4,5 +4,8 @@
 # VS Code config
 .vscode
 
+# JetBrains IDEs
+.idea
+
 # misc
 .DS_Store
