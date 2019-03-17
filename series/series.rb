@@ -5,11 +5,7 @@ class Series
 
   def slices(slice_length)
     raise ArgumentError if slice_length > @series.length
-    slices = []
-    iterations = @series.length - slice_length + 1
-    iterations.times do |index|
-      slices << @series[index...(index + slice_length)]
-    end
-    slices
+
+    @series.chars.each_cons(slice_length).to_a.map(&:join)
   end
 end
